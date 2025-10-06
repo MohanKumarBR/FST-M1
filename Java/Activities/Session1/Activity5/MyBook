@@ -1,0 +1,11 @@
+
+public class MyBook extends Book {
+
+	
+	void setTitle(String newTitle) {
+		// TODO Auto-generated method stub
+		title = newTitle;
+	}
+	
+
+}
