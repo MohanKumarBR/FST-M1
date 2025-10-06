@@ -1,0 +1,38 @@
+interface BicycleParts{
+	int tyres = 2;
+	int maxSpeed = 40;
+}
+
+interface BicycleOperations{
+	public void applyBrake(int decrement);
+	public void speedUp(int increment);
+	
+}
+
+public class Bicycle implements BicycleParts,BicycleOperations{
+
+	int gears, currentSpeeds;
+	public Bicycle(int gear,int currentSpeed) {
+		this.gears=gear;
+		this.currentSpeeds=currentSpeed;
+	}
+	
+	@Override
+	public void applyBrake(int decrement) {
+		// TODO Auto-generated method stub
+		currentSpeeds-=decrement;
+		System.out.println("Current speed: " + currentSpeeds);
+	}
+
+	@Override
+	public void speedUp(int increment) {
+		// TODO Auto-generated method stub
+		currentSpeeds+=increment;
+		System.out.println("Current speed: " + currentSpeeds);
+	}
+	
+	public String bicycleDesc() {
+	    return("No of gears are "+ gears + "\nMax Speed of bicycle is " + maxSpeed);
+	}
+	
+}
