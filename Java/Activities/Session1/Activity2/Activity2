@@ -1,0 +1,29 @@
+import java.util.*;
+public class Activity2 {
+	public static void main(String[] args) {
+		int [] arr= {10,77,10,54,-11,10};
+		
+		System.out.println("Original String : " + Arrays.toString(arr));
+		int check =30;
+		int search=10;
+		
+		System.out.println("Result: "+result(arr,search,check));
+		
+	}
+	
+	public static Boolean result(int[] numbers, int searching, int fixed) {
+		int sum=0;
+
+		for(int arr1: numbers) {
+			
+			if (arr1==searching) {
+				
+				sum+=searching;
+			}
+			if(sum>fixed) {
+				break;
+			}
+		}
+		return sum == fixed;
+	}
+}
