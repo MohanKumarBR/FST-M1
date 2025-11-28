@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="6805e033-4fe0-4755-a861-ed7509efc31f" created="3.63.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="IPREST" projectVersion="" updated="3.63.0 2025-10-21T08:28:07Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="6805e033-4fe0-4755-a861-ed7509efc31f" created="3.63.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="IPREST" projectVersion="" updated="3.63.0 2025-10-21T08:28:07Z" resourceRoot="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:RestService" id="c9f3e615-9ce9-4f48-81c8-7ff16caeeb13" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings id="0bfc038d-429d-498b-962b-70cc91fcdfdf"/>
@@ -31,6 +31,10 @@
         <con:request name="Request 1" id="96e21cb4-a724-4a43-b9b8-36e70a19f71a" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://ipwhois.app</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters>
             <con:entry key="IP" value="IP"/>
           </con:parameters>
@@ -41,7 +45,7 @@
       </con:method>
     </con:resource>
   </con:interface>
-  <con:testSuite id="dae53073-25ab-474f-9fe2-ea83691f4a87" name="Test Suite">
+  <con:testSuite id="dae53073-25ab-474f-9fe2-ea83691f4a87" name="Activity6">
     <con:settings id="661362d0-af3e-4f91-9211-9797f036f164"/>
     <con:runType>SEQUENTIAL</con:runType>
     <con:testCase id="eb2a4141-00c6-4f53-bb80-c22a0a5a9355" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case" searchProperties="true" timeout="0">
@@ -108,7 +112,7 @@
               <driver>com.mysql.jdbc.Driver</driver>
               <connstr>jdbc:mysql://db4free.net:3306/fstm1db?user=fstm1db&amp;password=PASS_VALUE</connstr>
               <pass>6Y6NowPybq</pass>
-              <Connection>FSTConnection</Connection>
+              <Connection>FSTConnection( Default environment )</Connection>
               <query/>
               <stored-procedure>false</stored-procedure>
             </con:configuration>
